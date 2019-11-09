@@ -88,7 +88,7 @@ void Toc:: generateMessage()
             if (!lost_pkt_seq_no) {
             if (counter <= loop) {
                 //EV << "Inside generating ack no counter <= window\n";
-                //EV << "'Lost pkt flag = " << lost_pkt_flag << "\n";
+                EV << "'Lost pkt flag = " << lost_pkt_flag << "\n";
                 //EV<<"'value of counter at start of loop = " << counter << "\n";
                 counter++;
 
