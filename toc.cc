@@ -72,7 +72,7 @@ void Toc:: generateMessage()
 
 
         if (lost_pkt_flag) {
-            EV <<"send that the packet is lost in generateMessage\n";
+            //EV <<"send that the packet is lost in generateMessage\n";
             sendMessage(msg);
             lost_pkt_flag = 0;
             counter = 0;
@@ -87,9 +87,9 @@ void Toc:: generateMessage()
 
             if (!lost_pkt_seq_no) {
             if (counter <= loop) {
-                EV << "Inside generating ack no counter <= window\n";
-                EV << "'Lost pkt flag = " << lost_pkt_flag << "\n";
-                EV<<"'value of counter at start of loop = " << counter << "\n";
+                //EV << "Inside generating ack no counter <= window\n";
+                //EV << "'Lost pkt flag = " << lost_pkt_flag << "\n";
+                //EV<<"'value of counter at start of loop = " << counter << "\n";
                 counter++;
 
                 if ((counter < loop) && (seq_count_copy == (seq_count + 1))) { /*receiving the packet for first time, in right sequence*/
